@@ -5,11 +5,11 @@ import { Btn, Contacts, ContactsItem, User } from './ContactList.styled';
 export const ContactList = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(getContacts);
-  const filter = useSelector(getFilter);
+  const onfilter = useSelector(getFilter);
 
   const findContacts = () => {
     return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(filter.toLowerCase())
+      contact.name.toLowerCase().includes(onfilter.toLowerCase())
     );
   };
 
