@@ -13,7 +13,7 @@ export const ContactList = () => {
     );
   };
 
-   const filteredContacts = findContacts();
+  const filteredContacts = findContacts();
 
   return (
     <Contacts>

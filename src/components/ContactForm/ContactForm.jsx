@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts, addContact } from '../../redux/slice';
@@ -31,7 +31,6 @@ export const ContactForm = () => {
       name,
       number,
     };
-    
     contacts.some(
       i =>
         i.name.toLowerCase() === contact.name.toLowerCase() ||
@@ -72,7 +71,3 @@ export const ContactForm = () => {
     </Form>
   );
 };
-
-// ContactForm.propTypes = {
-//   onSubmit: PropTypes.func.isRequired,
-// };
